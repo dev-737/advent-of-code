@@ -1,4 +1,3 @@
-console.log(Buffer.from('A').readUInt8());
 import fs from "fs";
 const filename = process.argv[2];
 
@@ -31,20 +30,20 @@ for (let i = 0; i < clean.length; i++) {
   if (me === MyMoves.Paper) myScore += 2;
   if (me === MyMoves.Scissors) myScore += 3
 
-
-  if (
+  
+   if (
+    (opponent === OpponentMoves.Rock && me === MyMoves.Rock) ||
+    (opponent === OpponentMoves.Paper && me === MyMoves.Paper) ||
+    (opponent === OpponentMoves.Scissors && me === MyMoves.Scissors)
+  )
+    myScore += 3; 
+  
+  else if (
     (opponent === OpponentMoves.Rock && me === MyMoves.Paper) ||
     (opponent === OpponentMoves.Paper && me === MyMoves.Scissors) ||
     (opponent === OpponentMoves.Scissors && me === MyMoves.Rock)
   )
     myScore += 6;
-  if (
-    (opponent === OpponentMoves.Rock && me === MyMoves.Rock) ||
-    (opponent === OpponentMoves.Paper && me === MyMoves.Paper) ||
-    (opponent === OpponentMoves.Scissors && me === MyMoves.Scissors)
-  )
-    myScore += 3;
 }
 
 console.log(myScore);
-

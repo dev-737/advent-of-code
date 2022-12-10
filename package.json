@@ -1,5 +1,6 @@
 {
-  "main": "build/part1.js",
+  "main": "build/Day 2/part1.js",
+  "license": "UNLICENSED",
   "scripts": {
    "dev": "tsc && node ." 
   },
