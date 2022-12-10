@@ -1,0 +1,6 @@
+node_modules/
+build/
+
+# input/test data from aoc website
+data.txt
+input.txt
